@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --t johnhedman/motion-pi:$GITHUB_SHA -t johnhedman/motion-pi:latest
+      run: docker build . --file Dockerfile -t johnhedman/motion-pi:$GITHUB_SHA -t johnhedman/motion-pi:latest
     - name: Deploy the Docker image
       run: docker push johnhedman/motion-pi
